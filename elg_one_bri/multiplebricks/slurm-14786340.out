@@ -1,0 +1,3 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/035/0359m042/rs0/log.0359m042
+srun: error: Invalid numeric value "-n" for requested node count.
+HUI-TEST:FINISHED EVERYTHING HERE

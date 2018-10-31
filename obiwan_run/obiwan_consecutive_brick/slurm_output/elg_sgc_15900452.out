@@ -1,0 +1,8 @@
+/etc/bash.bashrc.local: line 8: /opt/modules/default/etc/modules.sh: Input/output error
+/bin/bash: /opt/cray/pe/modules/3.2.10.6/bin/modulecmd: Input/output error
+/bin/bash: /opt/cray/pe/modules/3.2.10.6/bin/modulecmd: Input/output error
+/bin/bash: /opt/cray/pe/modules/3.2.10.6/bin/modulecmd: Input/output error
+srun: error: spank: /opt/cray/pe/atp/libAtpSLaunch.so: Plugin access denied
+1
+srun: error: spank: /opt/cray/pe/atp/libAtpSLaunch.so: Plugin access denied
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/000//more_rs201/log.0001p002

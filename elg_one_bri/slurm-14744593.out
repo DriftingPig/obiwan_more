@@ -1,0 +1,4 @@
+  File "./slurm_test_init.sh", line 3
+    export CSCRATCH_OBIWAN=$CSCRATCH/obiwan_Aug/repos_for_docker
+                         ^
+SyntaxError: invalid syntax

@@ -1,0 +1,7 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/000/0003m050/rs0/log.0003m050
+Python 3.5.2
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+srun: error: nid00549: task 0: Exited with exit code 1
+srun: Terminating job step 14731506.1
+srun: error: nid00549: task 0: Exited with exit code 1
+srun: error: Task 0 reported exit for a second time.

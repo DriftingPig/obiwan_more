@@ -1,0 +1,8 @@
+  File "./slurm_test_init.sh", line 4
+    echo $PYTHONPATH
+         ^
+SyntaxError: invalid syntax
+srun: error: nid13042: task 0: Exited with exit code 1
+srun: Terminating job step 14746981.0
+srun: error: nid13042: task 0: Exited with exit code 1
+srun: error: Task 0 reported exit for a second time.

@@ -1,0 +1,33 @@
+srun: Job 15897756 step creation temporarily disabled, retrying
+srun: Job 15897756 step creation temporarily disabled, retrying
+srun: Step created for job 15897756
+srun: Step created for job 15897756
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/008//more_rs201/log.0086p020
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/011//more_rs201/log.0111p005
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/001//more_rs201/log.0018m045
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/000//more_rs201/log.0001m007
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/006//more_rs201/log.0061m045
+srun: Job 15897756 step creation temporarily disabled, retrying
+srun: error: Unable to create step for job 15897756: Job/step already completing or completed
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 15897756.4 ON nid02138 CANCELLED AT 2018-10-22T08:28:19 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 15897756.5 ON nid02139 CANCELLED AT 2018-10-22T08:28:19 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 15897756.1 ON nid01887 CANCELLED AT 2018-10-22T08:28:19 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 15897756.2 ON nid02064 CANCELLED AT 2018-10-22T08:28:19 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 15897756.3 ON nid02120 CANCELLED AT 2018-10-22T08:28:19 DUE TO TIME LIMIT ***
+srun: got SIGCONT
+srun: got SIGCONT
+srun: got SIGCONT
+srun: got SIGCONT
+srun: got SIGCONT
+srun: forcing job termination
+srun: forcing job termination
+srun: forcing job termination
+srun: forcing job termination
+srun: forcing job termination
+srun: forcing job termination
+srun: forcing job termination

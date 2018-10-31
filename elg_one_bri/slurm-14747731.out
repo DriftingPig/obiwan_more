@@ -1,0 +1,5 @@
+Python 3.5.2
+/root/myinstall/astrometry/lib/python:
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+/srv/py3_venv/lib/python3.5/site-packages/pyfits/__init__.py:22: PyFITSDeprecationWarning: PyFITS is deprecated, please use astropy.io.fits
+  PyFITSDeprecationWarning)  # noqa

@@ -1,0 +1,22 @@
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/000//rs0/log.0001m005
+srun: Job 15122800 step creation temporarily disabled, retrying
+srun: Step created for job 15122800
+Python 3.5.2
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/tractor_code/lib/python3.5/site-packages:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_data/legacysurveydir_dr3
+total 32088
+lrwxrwxrwx 1 huikong huikong       59 Sep 17 12:16 2013A-0741 -> /global/projecta/projectdirs/cosmo/staging/decam/2013A-0741
+lrwxrwxrwx 1 huikong huikong       55 Sep 17 12:16 COSMOS -> /global/projecta/projectdirs/cosmo/staging/decam/COSMOS
+lrwxrwxrwx 1 huikong huikong       56 Sep 17 12:17 CPDES82 -> /global/projecta/projectdirs/cosmo/staging/decam/CPDES82
+lrwxrwxrwx 1 huikong huikong       49 Sep 17 12:13 DECam_CP -> /project/projectdirs/cosmo/staging/decam/DECam_CP
+lrwxrwxrwx 1 huikong huikong       62 Sep 17 12:18 DECam_CPFlats -> /global/projecta/projectdirs/cosmo/staging/decam/DECam_CPFlats
+lrwxrwxrwx 1 huikong huikong       50 Sep 17 12:14 DECam_Raw -> /project/projectdirs/cosmo/staging/decam/DECam_Raw
+lrwxrwxrwx 1 huikong huikong       63 Sep 17 12:18 DESY1_Stripe82 -> /global/projecta/projectdirs/cosmo/staging/decam/DESY1_Stripe82
+lrwxrwxrwx 1 huikong huikong       58 Sep 17 14:28 NonDECaLS -> /global/projecta/projectdirs/cosmo/staging/decam/NonDECaLS
+-rw-r----- 1 huikong huikong      407 Sep 17 12:21 README.rst
+lrwxrwxrwx 1 huikong huikong       61 Sep 17 12:19 Stacks_Aug14 -> /global/projecta/projectdirs/cosmo/staging/decam/Stacks_Aug14
+lrwxrwxrwx 1 huikong huikong       46 Sep 17 12:16 attic -> /project/projectdirs/cosmo/staging/decam/attic
+-rw-r----- 1 huikong huikong    43917 Sep 17 12:19 backups.csv
+-rw-r----- 1 huikong huikong 32788480 Sep 17 12:20 backups.db
+lrwxrwxrwx 1 huikong huikong       65 Sep 17 12:20 mkfringedata.tgz -> /global/projecta/projectdirs/cosmo/staging/decam/mkfringedata.tgz
+-rw-r--r-- 1 huikong huikong        5 Sep 17 13:29 test.txt

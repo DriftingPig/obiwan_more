@@ -1,0 +1,8 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/035/0351m042/rs0/log.0351m042
+srun: Job 14780085 step creation temporarily disabled, retrying
+srun: Step created for job 14780085
+Python 3.5.2
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+srun: got SIGCONT
+srun: forcing job termination
+slurmstepd: error: *** STEP 14780085.1 ON nid01914 CANCELLED AT 2018-09-12T15:02:52 ***

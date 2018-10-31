@@ -1,0 +1,6 @@
+shifter: source: No such file or directory
+shifter: export: No such file or directory
+Traceback (most recent call last):
+  File "readingtest.py", line 7, in <module>
+    import fitsio
+ImportError: No module named fitsio

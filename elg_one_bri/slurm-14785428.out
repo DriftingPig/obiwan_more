@@ -1,0 +1,11 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/035/0354m042/rs0/log.0354m042
+Python 3.5.2
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+ls: cannot access '/legacysurvey-0354m042/legacysurveydir_dr3': No such file or directory
+srun: error: nid01468: task 0: Exited with exit code 1
+srun: Terminating job step 14785428.1
+srun: error: nid01468: task 0: Exited with exit code 1
+srun: error: Task 0 reported exit for a second time.
+srun: error: nid01468: task 0: Exited with exit code 1
+srun: error: Task 0 reported exit for a second time.
+HUI-TEST:FINISHED EVERYTHING HERE

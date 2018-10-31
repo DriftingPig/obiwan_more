@@ -1,0 +1,4 @@
+2
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/000//more_rs201/log.0001p007
+srun: error: nid00764: task 0: Exited with exit code 1
+srun: Terminating job step 15900453.1

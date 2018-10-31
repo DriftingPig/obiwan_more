@@ -1,0 +1,4 @@
+0
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/000//more_rs201/log.0001m007
+srun: got SIGCONT
+slurmstepd: error: *** STEP 15899011.1 ON nid13054 CANCELLED AT 2018-10-22T10:37:10 ***

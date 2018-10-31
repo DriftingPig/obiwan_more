@@ -1,0 +1,16 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/035/0359m042/rs0/log.0359m042
+Python 3.5.2
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+total 80736
+drwxrwx--- 3 huikong huikong     4096 Sep  3 15:15 calib
+lrwxrwxrwx 1 huikong huikong       39 Jul 20  2017 calib_backup -> /global/cscratch1/sd/desiproc/dr5/calib
+drwxrwx--- 2 huikong huikong     4096 Aug 16  2017 images
+-rw-r----- 1 huikong huikong 46362240 Aug 30 06:59 survey-bricks.fits
+lrwxrwxrwx 1 huikong huikong       40 Aug 16  2017 survey-bricks.fits.gz -> ../legacysurveydir/survey-bricks.fits.gz
+-rw-rw---- 1 huikong huikong 36293578 Aug 16  2017 survey-ccds-ebossDR3.fits.gz
+lrwxrwxrwx 1 huikong huikong       33 Aug 16  2017 tycho2.fits.gz -> ../legacysurveydir/tycho2.fits.gz
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 14785503.1 ON nid00755 CANCELLED AT 2018-09-12T19:20:32 DUE TO TIME LIMIT ***
+srun: got SIGCONT
+srun: got SIGCONT
+srun: forcing job termination

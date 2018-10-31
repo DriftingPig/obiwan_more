@@ -1,0 +1,7 @@
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/000//rs0/log.0001m005
+Python 3.5.2
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/tractor_code/lib/python3.5/site-packages:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+/legacysurvey-0001m005/legacysurveydir_dr3
+ls: cannot access '/legacysurvey-0001m005/legacysurveydir_dr3/images/decam/': No such file or directory
+srun: error: nid02251: task 0: Exited with exit code 1
+srun: Terminating job step 15117903.1

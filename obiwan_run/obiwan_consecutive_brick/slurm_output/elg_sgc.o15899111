@@ -1,0 +1,7 @@
+10
+srun: Job 15899111 step creation temporarily disabled, retrying
+srun: Step created for job 15899111
+logging to.../global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/000//more_rs201/log.0003m022
+slurmstepd: error: *** STEP 15899111.1 ON nid00634 CANCELLED AT 2018-10-22T10:47:57 DUE TO TIME LIMIT ***
+srun: got SIGCONT
+srun: forcing job termination

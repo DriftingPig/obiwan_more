@@ -1,0 +1,6 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/009/0091m047/rs0/log.0091m047
+Python 3.5.2
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+srun: error: nid00757: task 0: Exited with exit code 1
+srun: Terminating job step 14768892.1
+HUI-TEST:FINISHED EVERYTHING HERE

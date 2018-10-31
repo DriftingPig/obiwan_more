@@ -1,0 +1,8 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_brick/logs/000/0001m005/rs0/log.0001m005
+Python 3.5.2
+/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py:/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/legacypipe/py:/root/myinstall/astrometry/lib/python:
+slurmstepd: error: *** JOB 14730873 ON nid02152 CANCELLED AT 2018-09-09T12:28:07 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 14730873.1 ON nid02152 CANCELLED AT 2018-09-09T12:28:07 DUE TO TIME LIMIT ***
+srun: got SIGCONT
+srun: forcing job termination
