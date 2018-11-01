@@ -1,0 +1,3 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/035/0356m040/more_rs201/log.0356m040
+srun: error: nid01188: task 0: Exited with exit code 1
+srun: Terminating job step 16094230.1

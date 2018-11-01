@@ -2,6 +2,7 @@ from __future__ import print_function
 import os 
 import glob
 import numpy as n
+import numpy as np
 from astropy.io import fits
 from math import *
 from astropy.table import Column
@@ -19,7 +20,7 @@ brick_list = n.array([ os.path.basename(br) for br in brick_pathes ])
 simdat_dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/sgc_brick_dat/'
 
 #all bricks should be succrssful
-fn_PB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_one_bri/parallel_run/brick_run_scheduler/ProcessedBricks.txt'
+fn_PB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/more/obiwan_run/brickstat/ProcessedBricks.txt'
 brick_list_real = n.loadtxt(fn_PB,dtype=n.str).transpose()
 
 #select ELGs in one brick
@@ -215,45 +216,90 @@ def select_ELG( path_2_tractor_file , startid = None, nobj = None):
     else :
         flag = False
         return flag, dat[selection_ngc], dat[selection_sgc]
-    
 
-def brick_stacks():
+def sub_stack_loop(sub_task_list):
     N_bricks=0
     count = 0
     sim_total_match = 0
     DR5_total_match = 0
     total_rands = 0
-    while 1:
-        print('#'+str(count))
-        new_tb_tccat = obiwan_random_match(count)
-        count += 1
-        if new_tb_tccat is not None:
-           sim_sel = new_tb_tccat['sim_ang_dis']>=-0.5
-           DR5_sel = new_tb_tccat['dr5_ang_dis']>=-0.5
-           sim_total_match += len(new_tb_tccat[sim_sel])
-           DR5_total_match += len(new_tb_tccat[DR5_sel])
-           total_rands += len(new_tb_tccat)
-           print('sim_total_match: %d DR5_total_match: %d total_rands: %d' %(sim_total_match, DR5_total_match, total_rands))
-           break
+    f1 = open('NOELGBricks.txt', 'a')
+    while count<len(sub_task_list):
+          print('#'+str(count))
+          new_col_tccat = obiwan_random_match(sub_task_list[count])
+          count += 1
+          if new_col_tccat is not None:
+              N_bricks+=1
+              sim_sel = new_col_tccat['sim_ang_dis']>=-0.5
+              DR5_sel = new_col_tccat['dr5_ang_dis']>=-0.5
+              sim_total_match += len(new_col_tccat[sim_sel])
+              DR5_total_match += len(new_col_tccat[DR5_sel])
+              total_rands += len(new_col_tccat)
+              print('sim_total_match: %d DR5_total_match: %d total_rands: %d' %(sim_total_match, DR5_total_match, total_rands))
+              break
+          else:
+              f1.write(str(brick_list[count])+'\n') 
     print('count is: ' + str(count))
-    
-    for ii in range(count,len(brick_list)):
+    if count>=len(sub_task_list):
+          if new_col_tccat is None:
+              return None
+          else:
+              return [np.array(new_col_tccat),len(new_col_tccat)]
+    #import pdb
+    #pdb.set_trace()
+    new_col_tccat = np.array(new_col_tccat)
+    for ii in range(sub_task_list[count],sub_task_list[-1]+1):
         print('#'+str(ii))
-        new_tb_tccat_i = obiwan_random_match(ii)
-        if new_tb_tccat_i is not None:
-            #import pdb
-            #pdb.set_trace()
-            new_tb_tccat = n.hstack((new_tb_tccat, new_tb_tccat_i))
-            sim_sel = new_tb_tccat_i['sim_ang_dis']>=-0.5
-            DR5_sel = new_tb_tccat_i['dr5_ang_dis']>=-0.5
-            sim_total_match += len(new_tb_tccat_i[sim_sel])
-            DR5_total_match += len(new_tb_tccat_i[DR5_sel])
-            total_rands += len(new_tb_tccat_i)
-            print('sim_total_match: %d DR5_total_match: %d total_rands: %d' %(sim_total_match, DR5_total_match, total_rands))
-        
-    coldefs_tccat_all = fits.ColDefs(new_tb_tccat)
-    hdu_tccat_all = fits.BinTableHDU.from_columns(coldefs_tccat_all)
+        new_col_tccat_i = obiwan_random_match(ii)
+        if new_col_tccat_i is not None:
+             N_bricks+=1
+             #new_col_tccat += fits.ColDefs(np.array(new_tb_tccat_i))
+             new_col_tccat = n.hstack((new_col_tccat, new_col_tccat_i))
+             sim_sel = new_col_tccat_i['sim_ang_dis']>=-0.5
+             DR5_sel = new_col_tccat_i['dr5_ang_dis']>=-0.5
+             sim_total_match += len(new_col_tccat_i[sim_sel])
+             DR5_total_match += len(new_col_tccat_i[DR5_sel])
+             total_rands += len(new_col_tccat_i)
+             print('sim_total_match: %d DR5_total_match: %d total_rands: %d' %(sim_total_match, DR5_total_match, total_rands))
+        else:
+            f1.write(str(brick_list[ii])+'\n')
+    #import pdb
+    #pdb.set_trace()
+    f1.close()
+    #pdb.set_trace() 
+    print('total valid bricks:'+str(N_bricks))
+    return [new_col_tccat, total_rands]
+
+def brick_stacks():
+    from multiprocessing import Pool
+    ntasks = 64
+    p = Pool(ntasks)
+    task_list = np.arange(0, len(brick_list))
+    sub_task_list = np.array_split(task_list, ntasks)
+    
+    new_col_tccat_list = p.map(sub_stack_loop, sub_task_list)
+    #new_col_tccat_list = sub_stack_loop(sub_task_list[0])
+    count = 0
+    f1 = open('NOELGBricks.txt', 'w') 
+    f1.close
+    while count<len(new_col_tccat_list):
+         if new_col_tccat_list[count] is not None:
+             break
+         count+=1
+    #import pdb
+    #pdb.set_trace()
+    new_col_tccat = new_col_tccat_list[count][0]
+    for i in range(count+1,len(new_col_tccat_list)):
+        if new_col_tccat_list[i] is not None:
+            new_col_tccat = np.hstack((new_col_tccat, new_col_tccat_list[i][0]))
+       
+    hdu_tccat_all = fits.BinTableHDU.from_columns(new_col_tccat)
     hdu_tccat_all.writeto('./random_subset.fits',overwrite = True)
+    tot=0
+    for subs in new_col_tccat_list:
+        if subs is not None:
+            tot+=subs[1]
+    print('tot:'+str(tot)+' length of data:'+str(len(new_col_tccat)))     
     
 if __name__ == '__main__':
     brick_stacks()

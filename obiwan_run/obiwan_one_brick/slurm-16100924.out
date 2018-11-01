@@ -1,0 +1,4 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/035/0356m040/more_rs201/log.0356m040
+slurmstepd: error: *** STEP 16100924.1 ON nid00690 CANCELLED AT 2018-10-31T17:44:24 DUE TO TIME LIMIT ***
+srun: got SIGCONT
+srun: forcing job termination
