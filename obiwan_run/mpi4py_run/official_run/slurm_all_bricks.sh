@@ -1,9 +1,9 @@
 #!/bin/bash -l
 
 #SBATCH -p regular
-#SBATCH -N 20
-#SBATCH -t 48:00:00
-#SBATCH --account=cosmo
+#SBATCH -N 10
+#SBATCH -t 5:00:00
+#SBATCH --account=desi
 #SBATCH --image=driftingpig/obiwan_composit:v3
 #SBATCH -J obiwan
 #SBATCH -o ./slurm_output/elg_sgc_%j.out
@@ -12,10 +12,10 @@
 #SBATCH --mail-user=kong.291@osu.edu  
 #SBATCH --mail-type=ALL
 
-export name_for_run=elg_eight_bricks
+export name_for_run=elg_new_ccd_list
 export randoms_db=None #run from a fits file
 export dataset=dr3
-export rowstart=201
+export rowstart=0
 export do_skipids=no
 export do_more=yes
 export minid=1
@@ -44,5 +44,5 @@ export OMP_NUM_THREADS=1
 export XDG_CONFIG_HOME=/dev/shm
 srun -n $SLURM_JOB_NUM_NODES mkdir -p $XDG_CONFIG_HOME/astropy
 
-srun -N 5 -n 10 -c $usecores shifter ./example1.sh
+srun -N 2 -n 4 -c $usecores shifter ./example1.sh
 wait

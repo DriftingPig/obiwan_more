@@ -20,14 +20,17 @@ sgc_surveybricks = surveybricks[sgc_selection]
 
     
 def startid(i):
-    return 10811721
+    if i<=64:
+         return 10811721
+    else:
+         return 77060581
 
 def GetBrickSrcs(index, write=True):
     from os.path import isfile
-    if isfile(outdir+'brick_%s.fits' % (sgc_surveybricks['BRICKNAME'][index])):
-        print('file exists for index %d' % index)
-        return True
-    log = logging.getLogger('grick_stats')
+    #if isfile(outdir+'brick_%s.fits' % (sgc_surveybricks['BRICKNAME'][index])):
+    #    print('file exists for index %d' % index)
+    #    return True
+    log = logging.getLogger('brick_stats')
     log.info('sgc_surveybricks[%d] brickname:%s ra1 %f ra2 %f dec1 %f dec2 %f' %(index, sgc_surveybricks['BRICKNAME'][index], sgc_surveybricks['RA1'][index], sgc_surveybricks['RA2'][index], sgc_surveybricks['DEC1'][index], sgc_surveybricks['DEC2'][index]))
     
     ra1 = sgc_surveybricks['RA1'][index]
@@ -36,7 +39,9 @@ def GetBrickSrcs(index, write=True):
     dec2 = sgc_surveybricks['DEC2'][index]
     flag = True
     TOTAL_COUNT=0
-    for i in range(48,64):
+    for i in range(48,81):
+        if i == 64:
+           continue
         hdu = fits.open(topdir_randoms+'randoms_seed_%d_startid_%d.fits' % (i, startid(i)))
         dat_i = hdu[1].data
         hdu.close()
@@ -54,18 +59,20 @@ def GetBrickSrcs(index, write=True):
            dat_brick = np.hstack((dat_brick, dat_i_brick))
            log.debug(len(dat_i_brick))
            log.debug(len(dat_brick))
+    log.info('brick %s length %d' %(sgc_surveybricks['BRICKNAME'][index], len(dat_brick)))
     #log.info('Total points here are: %d total number of bricks: %d' % (TOTAL_COUNT, len(sgc_surveybricks)))
     if write is True:
         cols = fits.ColDefs(np.array(dat_brick))
         HDU = fits.BinTableHDU.from_columns(cols)
-        HDU.writeto(outdir+'brick_%s.fits' % (sgc_surveybricks['BRICKNAME'][index]))
+        HDU.writeto(outdir+'brick_%s.fits' % (sgc_surveybricks['BRICKNAME'][index]), overwrite = True)
     return np.array(dat_brick)
 
 def GetBrickStats():
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
-    log = logging.getLogger('grick_stats')
+    log = logging.getLogger('brick_stats')
     log.info('entering GetBrickStats...')
     CPU_COUNT = multiprocessing.cpu_count()
+    log.info('CPU_COUNT %d' %(CPU_COUNT))
     p = multiprocessing.Pool(CPU_COUNT)
     tasks=range(len(sgc_surveybricks))
     outputs = p.map(GetBrickSrcs, tasks)

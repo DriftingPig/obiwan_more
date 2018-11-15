@@ -1,5 +1,5 @@
 #!/bin/bash -l
-RANDOMS_FROM_FITS=/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/sgc_brick_dat_2/brick_${1}.fits
+RANDOMS_FROM_FITS=/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/sgc_brick_dat/brick_${1}.fits
 bri=$(echo ${1} | head -c 3)
 outdir=${obiwan_out}/${name_for_run}
 if [ ${do_skipids} == "no" ]; then  

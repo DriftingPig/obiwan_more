@@ -28,21 +28,21 @@ export obiwan_out=$CSCRATCH_OBIWAN/obiwan_out
 export outdir=$CSCRATCH_OBIWAN/obiwan_out/eboss_elg/randoms_test_2
 export survey=eboss
 
-export startid=10811721 #1618001
-export max_prev_seed=48
+export startid=77060581 #1618001
+export max_prev_seed=65
 # SGC
 # SGC A
-#export nrandoms=2568833 #418000
-#export ra1=316.5
-#export ra2=360.
-#export dec1=-2.
-#export dec2=2.
+export nrandoms=66248860 #418000
+export ra1=316.5
+export ra2=360.
+export dec1=-2.
+export dec2=2.
 # SGC B
-export nrandoms=66248860
-export ra1=0.
-export ra2=45.
-export dec1=-5.
-export dec2=5.
+#export nrandoms=66248860
+#export ra1=0.
+#export ra2=45.
+#export dec1=-5.
+#export dec2=5.
 # NGC
 #export nrandoms=1200000
 #export ra1=126.

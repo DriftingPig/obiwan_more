@@ -2,7 +2,7 @@
 
 #SBATCH -p debug
 #SBATCH -N 1
-#SBATCH -t 00:30:00
+#SBATCH -t 00:15:00
 #SBATCH --account=desi
 #SBATCH --image=driftingpig/obiwan_composit:v3
 #SBATCH -J obiwan
