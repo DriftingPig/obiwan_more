@@ -10,8 +10,8 @@ export minid=1
 export object=elg
 export nobj=200
 
-export usecores=64
-export threads=64
+export usecores=1
+export threads=1
 export CSCRATCH=/global/cscratch1/sd/huikong
 export CSCRATCH_OBIWAN=$CSCRATCH/obiwan_Aug/repos_for_docker
 export PYTHONPATH=$CSCRATCH_OBIWAN/obiwan_code/py:$CSCRATCH_OBIWAN/legacypipe/py:$PYTHONPATH

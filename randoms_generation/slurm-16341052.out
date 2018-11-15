@@ -1,0 +1,23 @@
+obiwan_conda(19):ERROR:150: Module 'obiwan_conda' conflicts with the currently loaded module(s) 'desiconda/1.2.6.dev136'
+obiwan_conda(19):ERROR:102: Tcl command execution failed: conflict desiconda
+
+cat: /global/homes/h/huikong/.qdo_db_pass: No such file or directory
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+srun: got SIGCONT
+slurmstepd: error: *** STEP 16341052.1 ON nid02221 CANCELLED AT 2018-11-13T13:52:43 ***
+srun: forcing job termination

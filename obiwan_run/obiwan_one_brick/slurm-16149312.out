@@ -1,0 +1,5 @@
+Logging to: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/logs/035/0356m040/more_rs201/log.0356m040
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 16149312.1 ON nid00572 CANCELLED AT 2018-11-02T13:09:59 DUE TO TIME LIMIT ***
+srun: got SIGCONT
+srun: forcing job termination

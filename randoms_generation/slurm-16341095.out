@@ -1,0 +1,325 @@
+obiwan_conda(19):ERROR:150: Module 'obiwan_conda' conflicts with the currently loaded module(s) 'desiconda/1.2.6.dev136'
+obiwan_conda(19):ERROR:102: Tcl command execution failed: conflict desiconda
+
+cat: /global/homes/h/huikong/.qdo_db_pass: No such file or directory
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+TASK16
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678650
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679701
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.47 s
+entered draw_points
+(10, 1)
+redshifts= [0.86254507 0.85718067 0.86097972 ... 0.79529883 0.78423805 0.78429774]
+redrawing 352 redshifts
+(10,)
+len T= 4140553
+len i_both= 4140553
+len inBox= 4140553
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_79_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678654
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679705
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.46 s
+entered draw_points
+(10, 1)
+redshifts= [0.85803938 0.83384211 0.85607438 ... 0.83927812 0.79012396 0.84495994]
+redrawing 333 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_75_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678649
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679701
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.47 s
+entered draw_points
+(10, 1)
+redshifts= [0.85746666 0.82262399 0.89355322 ... 0.84919781 0.82212917 0.78584197]
+redrawing 341 redshifts
+(10,)
+len T= 4140553
+len i_both= 4140553
+len inBox= 4140553
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_77_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678640
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679691
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.48 s
+entered draw_points
+(10, 1)
+redshifts= [0.83997505 0.86667442 0.8466015  ... 0.79493461 0.81401136 0.82509521]
+redrawing 367 redshifts
+(10,)
+len T= 4140553
+len i_both= 4140553
+len inBox= 4140553
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_80_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678649
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679703
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.50 s
+entered draw_points
+(10, 1)
+redshifts= [0.85704019 0.86303196 0.88358397 ... 0.74250934 0.83655999 0.83068789]
+redrawing 368 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_73_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678633
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679680
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.48 s
+entered draw_points
+(10, 1)
+redshifts= [0.86964417 0.84700884 0.87084964 ... 0.82813873 0.80332968 0.85273439]
+redrawing 370 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_74_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678633
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679675
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.44 s
+entered draw_points
+(10, 1)
+redshifts= [0.8505893  0.86482887 0.84085425 ... 0.83055795 0.82359617 0.80688345]
+redrawing 320 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_76_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678632
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679691
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.43 s
+entered draw_points
+(10, 1)
+redshifts= [0.86177636 0.86217207 0.8723032  ... 0.81414855 0.77600356 0.85436416]
+redrawing 350 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_72_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678632
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679686
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.50 s
+entered draw_points
+(10, 1)
+redshifts= [0.84169978 0.84630207 0.84628224 ... 0.83294584 0.82524756 0.84521105]
+redrawing 362 redshifts
+(10,)
+len T= 4140553
+len i_both= 4140553
+len inBox= 4140553
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_78_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678650
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679693
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.47 s
+entered draw_points
+(10, 1)
+redshifts= [0.89375862 0.85795737 0.86295564 ... 0.85790666 0.78374458 0.79116135]
+redrawing 350 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_71_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678658
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679739
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.45 s
+entered draw_points
+(10, 1)
+redshifts= [0.83931833 0.85068819 0.87743758 ... 0.79051981 0.8475266  0.79238969]
+redrawing 346 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_67_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678652
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679709
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.45 s
+entered draw_points
+(10, 1)
+redshifts= [0.82371989 0.86673884 0.8602574  ... 0.76931832 0.83420305 0.82630117]
+redrawing 363 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_70_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678661
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679739
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.42 s
+entered draw_points
+(10, 1)
+redshifts= [0.84877077 0.85011416 0.87040661 ... 0.80472392 0.75975644 0.81222214]
+redrawing 342 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_69_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678633
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679709
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.43 s
+entered draw_points
+(10, 1)
+redshifts= [0.83611605 0.90289434 0.89185217 ... 0.82638787 0.80602825 0.81204736]
+redrawing 343 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_68_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678655
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679695
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/README.txt
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.42 s
+entered draw_points
+(10, 1)
+redshifts= [0.85705746 0.89025442 0.83813956 ... 0.80814937 0.8230837  0.82275408]
+redrawing 348 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_65_startid_77060581.fits
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+TIMING:after-imports  2018-11-13 13:54:00.678660
+getting dec1...
+done...
+TIMING:after argparse 2018-11-13 13:54:00.679772
+ndraws= 66248860
+TIMING:parse-args  Wall: 0.71 s, CPU: 0.44 s
+entered draw_points
+(10, 1)
+redshifts= [0.83877    0.83266934 0.85060954 ... 0.77864101 0.79768751 0.80911187]
+redrawing 333 redshifts
+(10,)
+len T= 4140554
+len i_both= 4140554
+len inBox= 4140554
+Wrote /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/randoms_test_2/randoms_seed_66_startid_77060581.fits
