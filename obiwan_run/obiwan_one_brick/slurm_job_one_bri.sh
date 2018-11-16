@@ -2,7 +2,11 @@
 
 #SBATCH -p regular
 #SBATCH -N 1
+<<<<<<< HEAD
 #SBATCH -t 10:00:00
+=======
+#SBATCH -t 00:15:00
+>>>>>>> 1e830dbbda9c6163e108ecbf241304f3fdd257b6
 #SBATCH --account=desi
 #SBATCH --image=driftingpig/obiwan_composit:v3
 #SBATCH -J obiwan

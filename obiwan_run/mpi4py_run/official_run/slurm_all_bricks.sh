@@ -1,8 +1,13 @@
 #!/bin/bash -l
 
 #SBATCH -p regular
+<<<<<<< HEAD
 #SBATCH -N 2
 #SBATCH -t 8:00:00
+=======
+#SBATCH -N 10
+#SBATCH -t 5:00:00
+>>>>>>> 1e830dbbda9c6163e108ecbf241304f3fdd257b6
 #SBATCH --account=desi
 #SBATCH --image=driftingpig/obiwan_composit:v3
 #SBATCH -J obiwan
