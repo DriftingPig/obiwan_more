@@ -1,11 +1,11 @@
 #!/bin/bash -l
 
-#SBATCH -p regular
+#SBATCH -p debug
 #SBATCH -N 1
-#SBATCH -t 10:00:00
-#SBATCH --account=desi
+#SBATCH -t 0:05:00
+#SBATCH --account=eboss
 #SBATCH --image=driftingpig/obiwan_composit:v3
-#SBATCH -J obiwan
+#SBATCH -J sleep2
 #SBATCH -L SCRATCH,project
 #SBATCH -C haswell
 #SBATCH --mail-user=kong.291@osu.edu  
@@ -14,7 +14,6 @@
 export name_for_run=elg_new_ccd_list
 export randoms_db=None #run from a fits file
 export dataset=dr3
-export brick=3246p007
 export rowstart=0
 export do_skipids=no
 export do_more=yes
@@ -22,7 +21,7 @@ export minid=1
 export object=elg
 export nobj=1000
 
-export usecores=64
+export usecores=8
 export threads=$usecores
 #threads=1
 export CSCRATCH_OBIWAN=$CSCRATCH/obiwan_Aug/repos_for_docker
@@ -35,28 +34,6 @@ export obiwan_out=$CSCRATCH_OBIWAN/obiwan_out
 #source $CSCRATCH/obiwan_code/obiwan/bin/run_atnersc/bashrc_obiwan
 export LEGACY_SURVEY_DIR=$obiwan_data/legacysurveydir_dr3
 
-
-
-# Redirect logs
-export bri=$(echo $brick | head -c 3)
-export outdir=${obiwan_out}/${name_for_run}
-if [ ${do_skipids} == "no" ]; then
-  if [ ${do_more} == "no" ]; then
-    export rsdir=rs${rowstart}
-  else
-    export rsdir=more_rs${rowstart}
-  fi
-else
-  if [ ${do_more} == "no" ]; then
-    export rsdir=skip_rs${rowstart}
-  else
-    export rsdir=more_skip_rs${rowstart}
-  fi
-fi
-export log=${outdir}/logs/${bri}/${brick}/${rsdir}/log.${brick}
-mkdir -p $(dirname $log)
-echo Logging to: $log
-
 # NERSC / Cray / Cori / Cori KNL things
 export KMP_AFFINITY=disabled
 export MPICH_GNI_FORK_MODE=FULLCOPY
@@ -66,6 +43,5 @@ export OMP_NUM_THREADS=1
 export XDG_CONFIG_HOME=/dev/shm
 srun -n $SLURM_JOB_NUM_NODES mkdir -p $XDG_CONFIG_HOME/astropy
 
-#cd $obiwan_code/obiwan/py
-#export dataset=`echo $dataset | tr '[a-z]' '[A-Z]'`
-srun -N 1 -n 1 -c $usecores shifter ./slurm_job_one_bri_init.sh 
+srun -N 1 -n 8 -c $usecores shifter ./example1.sh
+wait

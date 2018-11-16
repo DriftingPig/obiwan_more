@@ -1,0 +1,96 @@
+I start sleeping for 0 seconds
+I start sleeping for 1 seconds
+I start sleeping for 3 seconds
+I start sleeping for 5 seconds
+I start sleeping for 6 seconds
+I start sleeping for 2 seconds
+I start sleeping for 4 seconds
+I woke up after sleeping for 0 seconds
+I start sleeping for 7 seconds
+I woke up after sleeping for 1 seconds
+I start sleeping for 8 seconds
+I woke up after sleeping for 2 seconds
+I start sleeping for 9 seconds
+I woke up after sleeping for 3 seconds
+I start sleeping for 10 seconds
+I woke up after sleeping for 4 seconds
+I start sleeping for 11 seconds
+I woke up after sleeping for 5 seconds
+I start sleeping for 12 seconds
+I woke up after sleeping for 6 seconds
+I start sleeping for 13 seconds
+I woke up after sleeping for 7 seconds
+I start sleeping for 14 seconds
+I woke up after sleeping for 8 seconds
+I start sleeping for 15 seconds
+I woke up after sleeping for 9 seconds
+I start sleeping for 16 seconds
+I woke up after sleeping for 10 seconds
+I start sleeping for 17 seconds
+I woke up after sleeping for 11 seconds
+I start sleeping for 18 seconds
+I woke up after sleeping for 12 seconds
+I start sleeping for 19 seconds
+I woke up after sleeping for 13 seconds
+I woke up after sleeping for 14 seconds
+I woke up after sleeping for 15 seconds
+I woke up after sleeping for 16 seconds
+I woke up after sleeping for 17 seconds
+I woke up after sleeping for 18 seconds
+I woke up after sleeping for 19 seconds
+I am  nid01050 rank 1 (total 8)
+  Slave nid01050 rank 1 executing "0" task_id "0"
+  Slave nid01050 rank 1 executing "7" task_id "7"
+  Slave nid01050 rank 1 executing "14" task_id "14"
+Task completed (rank 1)
+I am  nid01050 rank 2 (total 8)
+  Slave nid01050 rank 2 executing "1" task_id "1"
+  Slave nid01050 rank 2 executing "8" task_id "8"
+  Slave nid01050 rank 2 executing "15" task_id "15"
+Task completed (rank 2)
+I am  nid01050 rank 3 (total 8)
+  Slave nid01050 rank 3 executing "2" task_id "2"
+  Slave nid01050 rank 3 executing "9" task_id "9"
+  Slave nid01050 rank 3 executing "16" task_id "16"
+Task completed (rank 3)
+I am  nid01050 rank 4 (total 8)
+  Slave nid01050 rank 4 executing "3" task_id "3"
+  Slave nid01050 rank 4 executing "10" task_id "10"
+  Slave nid01050 rank 4 executing "17" task_id "17"
+Task completed (rank 4)
+I am  nid01050 rank 5 (total 8)
+  Slave nid01050 rank 5 executing "4" task_id "4"
+  Slave nid01050 rank 5 executing "11" task_id "11"
+  Slave nid01050 rank 5 executing "18" task_id "18"
+Task completed (rank 5)
+I am  nid01050 rank 6 (total 8)
+  Slave nid01050 rank 6 executing "5" task_id "5"
+  Slave nid01050 rank 6 executing "12" task_id "12"
+  Slave nid01050 rank 6 executing "19" task_id "19"
+Task completed (rank 6)
+I am  nid01050 rank 7 (total 8)
+  Slave nid01050 rank 7 executing "6" task_id "6"
+  Slave nid01050 rank 7 executing "13" task_id "13"
+Task completed (rank 7)
+I am  nid01050 rank 0 (total 8)
+Master: slave finished is task and says "I completed my task (0)"
+Master: slave finished is task and says "I completed my task (1)"
+Master: slave finished is task and says "I completed my task (2)"
+Master: slave finished is task and says "I completed my task (3)"
+Master: slave finished is task and says "I completed my task (4)"
+Master: slave finished is task and says "I completed my task (5)"
+Master: slave finished is task and says "I completed my task (6)"
+Master: slave finished is task and says "I completed my task (7)"
+Master: slave finished is task and says "I completed my task (8)"
+Master: slave finished is task and says "I completed my task (9)"
+Master: slave finished is task and says "I completed my task (10)"
+Master: slave finished is task and says "I completed my task (11)"
+Master: slave finished is task and says "I completed my task (12)"
+Master: slave finished is task and says "I completed my task (13)"
+Master: slave finished is task and says "I completed my task (14)"
+Master: slave finished is task and says "I completed my task (15)"
+Master: slave finished is task and says "I completed my task (16)"
+Master: slave finished is task and says "I completed my task (17)"
+Master: slave finished is task and says "I completed my task (18)"
+Master: slave finished is task and says "I completed my task (19)"
+Task completed (rank 0)

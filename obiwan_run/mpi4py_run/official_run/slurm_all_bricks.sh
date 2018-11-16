@@ -1,8 +1,8 @@
 #!/bin/bash -l
 
 #SBATCH -p regular
-#SBATCH -N 10
-#SBATCH -t 5:00:00
+#SBATCH -N 2
+#SBATCH -t 8:00:00
 #SBATCH --account=desi
 #SBATCH --image=driftingpig/obiwan_composit:v3
 #SBATCH -J obiwan

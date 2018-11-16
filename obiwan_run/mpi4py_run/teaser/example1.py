@@ -31,12 +31,9 @@ class MyApp(object):
         # let's prepare our work queue. This can be built at initialization time
         # but it can also be added later as more work become available
         #
-        task_list = np.loadtxt(BRICKSTAT_DIR + 'BadBricks.txt', dtype=np.str)
-        if tasks is None:
-           tasks = len(task_list)
-        for i in range(tasks):
+        for i in range(20):
             # 'data' will be passed to the slave and can be anything
-            self.work_queue.add_work(data=(task_list[i], i))
+            self.work_queue.add_work(data=(i, i))
        
         #
         # Keeep starting slaves as long as there is work to do
@@ -74,8 +71,10 @@ class MySlave(Slave):
         rank = MPI.COMM_WORLD.Get_rank()
         name = MPI.Get_processor_name()
         task, task_arg = data
-        subprocess.call(["./slurm_brick_scheduler.sh",task])
+        subprocess.call(["./sleep.sh",str(task)])
         print('  Slave %s rank %d executing "%s" task_id "%d"' % (name, rank, task, task_arg) )
+        import sys
+        sys.stdout()
         return (True, 'I completed my task (%d)' % task_arg)
 
 
@@ -86,7 +85,8 @@ def main():
     size = MPI.COMM_WORLD.Get_size()
 
     print('I am  %s rank %d (total %d)' % (name, rank, size) )
-
+    import sys
+    sys.stdout()
     if rank == 0: # Master
 
         app = MyApp(slaves=range(1, size))
