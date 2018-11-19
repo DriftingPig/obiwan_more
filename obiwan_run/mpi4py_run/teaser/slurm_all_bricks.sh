@@ -1,17 +1,11 @@
 #!/bin/bash -l
 
-#SBATCH -p regular
-<<<<<<< HEAD
-#SBATCH -N 2
-#SBATCH -t 8:00:00
-=======
-#SBATCH -N 10
-#SBATCH -t 5:00:00
->>>>>>> 1e830dbbda9c6163e108ecbf241304f3fdd257b6
-#SBATCH --account=desi
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -t 0:05:00
+#SBATCH --account=eboss
 #SBATCH --image=driftingpig/obiwan_composit:v3
-#SBATCH -J obiwan
-#SBATCH -o ./slurm_output/elg_sgc_%j.out
+#SBATCH -J sleep2
 #SBATCH -L SCRATCH,project
 #SBATCH -C haswell
 #SBATCH --mail-user=kong.291@osu.edu  
@@ -27,7 +21,7 @@ export minid=1
 export object=elg
 export nobj=1000
 
-export usecores=32
+export usecores=8
 export threads=$usecores
 #threads=1
 export CSCRATCH_OBIWAN=$CSCRATCH/obiwan_Aug/repos_for_docker
@@ -49,5 +43,5 @@ export OMP_NUM_THREADS=1
 export XDG_CONFIG_HOME=/dev/shm
 srun -n $SLURM_JOB_NUM_NODES mkdir -p $XDG_CONFIG_HOME/astropy
 
-srun -N 2 -n 4 -c $usecores shifter ./example1.sh
+srun -N 1 -n 8 -c $usecores shifter ./example1.sh
 wait

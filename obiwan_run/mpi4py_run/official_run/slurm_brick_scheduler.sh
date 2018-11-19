@@ -32,5 +32,5 @@ python $obiwan_code/py/obiwan/kenobi.py --dataset ${dataset} -b $1 \
        --randoms_from_fits $RANDOMS_FROM_FITS \
        --verbose \
        >> $log 2>&1
-
+echo FINISHED NOW!
 wait

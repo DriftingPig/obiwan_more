@@ -1,0 +1,58 @@
+I am  nid02080 rank 1 (total 8)
+I am  nid02080 rank 3 (total 8)
+I am  nid02080 rank 5 (total 8)
+I am  nid02080 rank 7 (total 8)
+I am  nid02080 rank 0 (total 8)
+I am  nid02080 rank 4 (total 8)
+I am  nid02080 rank 2 (total 8)
+I am  nid02080 rank 6 (total 8)
+Traceback (most recent call last):
+  File "./example1.py", line 103, in <module>
+    main()
+  File "./example1.py", line 89, in main
+    sys.stdout()
+TypeError: '_io.TextIOWrapper' object is not callable
+Traceback (most recent call last):
+  File "./example1.py", line 103, in <module>
+    main()
+  File "./example1.py", line 89, in main
+    sys.stdout()
+TypeError: '_io.TextIOWrapper' object is not callable
+Traceback (most recent call last):
+  File "./example1.py", line 103, in <module>
+    main()
+  File "./example1.py", line 89, in main
+    sys.stdout()
+TypeError: '_io.TextIOWrapper' object is not callable
+Traceback (most recent call last):
+  File "./example1.py", line 103, in <module>
+    main()
+  File "./example1.py", line 89, in main
+    sys.stdout()
+TypeError: '_io.TextIOWrapper' object is not callable
+Traceback (most recent call last):
+  File "./example1.py", line 103, in <module>
+    main()
+  File "./example1.py", line 89, in main
+    sys.stdout()
+TypeError: '_io.TextIOWrapper' object is not callable
+Traceback (most recent call last):
+  File "./example1.py", line 103, in <module>
+    main()
+  File "./example1.py", line 89, in main
+    sys.stdout()
+TypeError: '_io.TextIOWrapper' object is not callable
+Traceback (most recent call last):
+  File "./example1.py", line 103, in <module>
+    main()
+  File "./example1.py", line 89, in main
+    sys.stdout()
+TypeError: '_io.TextIOWrapper' object is not callable
+Traceback (most recent call last):
+  File "./example1.py", line 103, in <module>
+    main()
+  File "./example1.py", line 89, in main
+    sys.stdout()
+TypeError: '_io.TextIOWrapper' object is not callable
+srun: error: nid02080: tasks 0-7: Exited with exit code 1
+srun: Terminating job step 16395690.1

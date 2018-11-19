@@ -1,8 +1,12 @@
 #!/bin/bash -l
 
-#SBATCH -p debug
+#SBATCH -p regular
 #SBATCH -N 1
+<<<<<<< HEAD
+#SBATCH -t 10:00:00
+=======
 #SBATCH -t 00:15:00
+>>>>>>> 1e830dbbda9c6163e108ecbf241304f3fdd257b6
 #SBATCH --account=desi
 #SBATCH --image=driftingpig/obiwan_composit:v3
 #SBATCH -J obiwan
@@ -11,11 +15,11 @@
 #SBATCH --mail-user=kong.291@osu.edu  
 #SBATCH --mail-type=ALL
 
-export name_for_run=elg_eight_bricks
+export name_for_run=elg_new_ccd_list
 export randoms_db=None #run from a fits file
 export dataset=dr3
-export brick=0356m040
-export rowstart=201
+export brick=3246p007
+export rowstart=0
 export do_skipids=no
 export do_more=yes
 export minid=1
