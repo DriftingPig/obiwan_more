@@ -1,8 +1,8 @@
 #!/bin/bash -l
 
 #SBATCH -p regular
-#SBATCH -N 2
-#SBATCH -t 8:00:00
+#SBATCH -N 30
+#SBATCH -t 30:00:00
 #SBATCH --account=desi
 #SBATCH --image=driftingpig/obiwan_composit:v3
 #SBATCH -J obiwan
@@ -44,5 +44,5 @@ export OMP_NUM_THREADS=1
 export XDG_CONFIG_HOME=/dev/shm
 srun -n $SLURM_JOB_NUM_NODES mkdir -p $XDG_CONFIG_HOME/astropy
 
-srun -N 2 -n 4 -c $usecores shifter ./example1.sh
+srun -N 20 -n 40 -c $usecores shifter ./example1.sh
 wait

@@ -116,7 +116,7 @@ def Obiwansys(surveyname,map_name='ext',sysmax=0.13,sysmin=0.01,res=256,nest = F
         fs.write(str(sysv)+' '+str(ns)+' '+str(nse)+'\n')
     fs.close()
     print("test4")
-    plot_exct(outputname,"./plots/"+map_name+"_"+dataset+"_old.png",'eBoss sgc '+dataset,xlab = xlab)
+    plot_exct(outputname,"./plots/"+map_name+"_"+dataset+"_sub.png",'eBoss sgc '+dataset,xlab = xlab)
     return True
 
 def plot_exct(inputname,output_plot,titlename,xlab = 'ext'):
@@ -153,7 +153,7 @@ def plot_exct(inputname,output_plot,titlename,xlab = 'ext'):
     return True   
 
 eboss=surveynames()
-eboss.eboss_sgc_masked_old()
+eboss.eboss_sgc_masked()
 #Obiwansys(eboss,'ext',sysmax=0.07,sysmin=0.01)
 #Obiwansys(eboss,'star',sysmax=180,sysmin=50)
 '''
@@ -167,15 +167,15 @@ Obiwansys(eboss,'hppsfsize_r',sysmax=2,sysmin=0.9,dataset = 'uniform',xlab='psf 
 Obiwansys(eboss,'hppsfsize_r',sysmax=2,sysmin=0.9,dataset = 'obiwan',xlab = 'psf size r')
 '''
 
-'''
-Obiwansys(eboss,'hpstardens',sysmax=1500,sysmin=900,dataset = 'uniform',xlab='star density')
-Obiwansys(eboss,'hpstardens',sysmax=1500,sysmin=900,dataset = 'obiwan',xlab='star density')
-'''
+
+Obiwansys(eboss,'hpstardens',sysmax=1300,sysmin=900,dataset = 'uniform',xlab='star density')
+Obiwansys(eboss,'hpstardens',sysmax=1300,sysmin=900,dataset = 'obiwan',xlab='star density')
 
 
+'''
 Obiwansys(eboss,'hpebv',sysmax=0.085,sysmin=0.01,dataset = 'uniform',xlab='extinction')
 Obiwansys(eboss,'hpebv',sysmax=0.085,sysmin=0.01,dataset = 'obiwan',xlab='extinction')
-
+'''
 
 '''
 Obiwansys(eboss,'hppsfdepth_r',sysmax=600,sysmin=80,dataset = 'uniform',xlab='psf depth r')
