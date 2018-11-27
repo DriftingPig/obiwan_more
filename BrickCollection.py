@@ -20,17 +20,15 @@ brick_list = n.array([ os.path.basename(br) for br in brick_pathes ])
 simdat_dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/sgc_brick_dat/'
 
 #all bricks should be succrssful, but might not contain elgs after selection
-fn_PB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/more/obiwan_run/brickstat/ProcessedBricks.txt'
-fn_FB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/more/obiwan_run/brickstat/elg_new_ccd_list/FinishedBricks.txt'
+fn_PB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/more/obiwan_run/brickstat/elg_new_ccd_list/FinishedBricks.txt'
+#fn_FB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/more/obiwan_run/brickstat/elg_new_ccd_list/FinishedBricks.txt'
 brick_list_real = n.loadtxt(fn_PB,dtype=n.str).transpose()
-brick_list_finished = n.loadtxt(fn_FB,dtype=n.str).transpose()
+#brick_list_finished = n.loadtxt(fn_FB,dtype=n.str).transpose()
 #select ELGs in one brick
 def select_all(index, top_dir = top_dir, brick_pathes = brick_pathes, brick_list = brick_list, startid = 0, nobj = 1000, footprint = 'sgc'):
     brick_name = brick_list[index]
     if not brick_name in brick_list_real:
         return None
-    if not brick_name in brick_list_finished:
-         return None
     #sim catalogue -- need to be modifiled in the future, multiple rs
     fn_simcat = simdat_dir + 'brick_' + brick_name + '.fits'
     assert(os.path.isfile(fn_simcat))
@@ -42,7 +40,7 @@ def select_all(index, top_dir = top_dir, brick_pathes = brick_pathes, brick_list
     fn_DR5 = os.path.join( top_dir_dr5, brick_name[:3], "tractor-"+brick_name+".fits")
     assert(os.path.isfile(fn_DR5))
     #select ELG for obiwan-randoms
-    flag_tc, tcN_i, tcS_i = select_ELG(fn_tractorcat, startid = startid, nobj = nobj)
+    flag_tc, tcN_i, tcS_i = select_ELG(fn_tractorcat)
     #select ELG for DR5 data
     flag_DR5, DR5N_i, DR5S_i = select_ELG(fn_DR5)
     #open sim data
@@ -232,6 +230,8 @@ def sub_stack_loop(sub_task_list):
           X = obiwan_random_match(sub_task_list[count])
           count += 1
           if X is not None:
+              #import pdb
+              #pdb.set_trace()
               (new_col_tccat, new_col_simcat, new_col_dr5cat) = X
               N_bricks+=1
               sim_sel = new_col_tccat['sim_ang_dis']>=-0.5
@@ -283,7 +283,7 @@ def sub_stack_loop(sub_task_list):
 
 def brick_stacks():
     from multiprocessing import Pool
-    ntasks = 20
+    ntasks = 25
     p = Pool(ntasks)
     task_list = np.arange(0, len(brick_list))
     sub_task_list = np.array_split(task_list, ntasks)
@@ -312,11 +312,11 @@ def brick_stacks():
             new_col_dr5cat = np.hstack((new_col_dr5cat, new_col_dr5cat_i))
        
     hdu_tccat_all = fits.BinTableHDU.from_columns(new_col_tccat)
-    hdu_tccat_all.writeto(output_dir + 'random_subset_sub.fits',overwrite = True)
+    hdu_tccat_all.writeto(output_dir + 'random_subset.fits',overwrite = True)
     hdu_simcat_all = fits.BinTableHDU.from_columns(new_col_simcat)
-    hdu_simcat_all.writeto(output_dir + 'sim_subset_sub.fits',overwrite = True)
+    hdu_simcat_all.writeto(output_dir + 'sim_subset.fits',overwrite = True)
     hdu_dr5cat_all = fits.BinTableHDU.from_columns(new_col_dr5cat)
-    hdu_dr5cat_all.writeto(output_dir + 'dr5cat_subset_sub.fits',overwrite = True)
+    hdu_dr5cat_all.writeto(output_dir + 'dr5cat_subset.fits',overwrite = True)
     tot=0
     for subs in X:
         if subs is not None:
@@ -325,3 +325,6 @@ def brick_stacks():
     
 if __name__ == '__main__':
     brick_stacks()
+    #index = np.where(brick_list == '0168m027')[0]
+    #print(int(index))
+    #sub_stack_loop([int(index)])

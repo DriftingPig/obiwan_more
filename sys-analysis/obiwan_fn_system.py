@@ -140,14 +140,14 @@ class surveynames():
     def eboss_sgc_masked(self):
         self.dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/subset/'
         self.obiwan = self.dir + 'randoms_subset_masked.fits'
-        self.uniform = self.dir + 'dr5_subset_masked.fits'
-        self.data = self.dir + 'sim_subset_masked.fits'
+        self.data = self.dir + 'dr5_subset_masked.fits'
+        self.uniform = self.dir + 'sim_subset_masked.fits'
         self.comment = "newly processed masked sgc data"
     def eboss_sgc_masked_old(self):
         self.dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/subset/'
         self.obiwan = self.dir + 'randoms_subset_masked_old.fits'
-        self.uniform = self.dir + 'dr5_subset_masked_old.fits'
-        self.data = self.dir + 'sim_subset_masked_old.fits'
+        self.data = self.dir + 'dr5_subset_masked_old.fits'
+        self.uniform = self.dir + 'sim_subset_masked_old.fits'
         self.comment = "newly processed masked sgc data"
 #mask
 class masks():
