@@ -14,8 +14,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 
 def Obiwansys(surveyname,map_name='ext',sysmax=0.13,sysmin=0.01,res=256,nest = False,dataset = 'obiwan',xlab = ''):
     filename = surveyname.data
-    if dataset == 'obiwan':
-        ranfile = surveyname.obiwan
+    if dataset == 'weight':
+        ranfile = surveyname.uniform
     elif dataset == 'uniform':
         ranfile = surveyname.uniform
     if map_name == 'star':
@@ -24,7 +24,7 @@ def Obiwansys(surveyname,map_name='ext',sysmax=0.13,sysmin=0.01,res=256,nest = F
         mapname = surveyname.ext_map
     else:
         mapname = surveyname.anand_map
-    outputname = './data/'+map_name+'_sys_'+dataset+'.dat'
+    outputname = './data/'+map_name+'_sys_'+dataset+'_WEIGHT_SYSTOT_sub.dat'
     print("test1")
     #file readin
     data = fits.open(filename)[1].data
@@ -54,14 +54,18 @@ def Obiwansys(surveyname,map_name='ext',sysmax=0.13,sysmin=0.01,res=256,nest = F
     #randoms
     pixlr = np.zeros(npo)
     nr=0.
-    ra,dec = ran_data['ra'],ran_data['dec']
+    ra,dec = ran_data['RA'],ran_data['DEC']
     pts = hp.pixelfunc.ang2pix(res,ra,dec,nest = nest,lonlat = True)
     pts.astype(int)
     for i in range(0,len(ran_data)):
         #ra,dec =  ran_data['ra'][i],ran_data['dec'][i]
         #p = hp.ang2pix(res,ra,dec,nest = nest,lonlat = True)
-        pixlr[pts[i]] += 1.#ran_data['obiwan_weight'][i]#modified
-        nr += 1.#ran_data['obiwan_weight'][i]#modified
+        if dataset == 'uniform':
+            pixlr[pts[i]] += 1.#ran_data['obiwan_weight'][i]#modified
+            nr += 1.#ran_data['obiwan_weight'][i]#modified
+        if dataset == 'weight':
+            pixlr[pts[i]] += ran_data['WEIGHT_SYSTOT'][i]
+            nr += ran_data['WEIGHT_SYSTOT'][i]
         
     print('total number of galaxies,randoms:')
     print('%f %f' % (ng,nr))
@@ -116,7 +120,7 @@ def Obiwansys(surveyname,map_name='ext',sysmax=0.13,sysmin=0.01,res=256,nest = F
         fs.write(str(sysv)+' '+str(ns)+' '+str(nse)+'\n')
     fs.close()
     print("test4")
-    plot_exct(outputname,"./plots/"+map_name+"_"+dataset+"_old.png",'eBoss sgc '+dataset,xlab = xlab)
+    plot_exct(outputname,"./plots/"+map_name+"_"+dataset+"_WEIGHT_SYSTOT_sub.png",'eBoss sgc '+dataset,xlab = xlab)
     return True
 
 def plot_exct(inputname,output_plot,titlename,xlab = 'ext'):
@@ -153,7 +157,7 @@ def plot_exct(inputname,output_plot,titlename,xlab = 'ext'):
     return True   
 
 eboss=surveynames()
-eboss.eboss_sgc_masked_old()
+eboss.eboss_WEIGHT_SYSTOT_sub()
 #Obiwansys(eboss,'ext',sysmax=0.07,sysmin=0.01)
 #Obiwansys(eboss,'star',sysmax=180,sysmin=50)
 '''
@@ -168,8 +172,8 @@ Obiwansys(eboss,'hppsfsize_r',sysmax=2,sysmin=0.9,dataset = 'obiwan',xlab = 'psf
 '''
 
 
-Obiwansys(eboss,'ext',sysmax=0.085,sysmin=0.02,dataset = 'uniform',xlab='extinction')
-Obiwansys(eboss,'ext',sysmax=0.085,sysmin=0.02,dataset = 'obiwan',xlab='extinction')
+Obiwansys(eboss,'hpstardens',sysmax=1300,sysmin=900,dataset = 'uniform',xlab='star')
+Obiwansys(eboss,'hpstardens',sysmax=1300,sysmin=900,dataset = 'weight',xlab='star')
 
 
 '''

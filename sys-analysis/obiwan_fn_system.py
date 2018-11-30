@@ -149,6 +149,10 @@ class surveynames():
         self.data = self.dir + 'dr5_subset_masked_old.fits'
         self.uniform = self.dir + 'sim_subset_masked_old.fits'
         self.comment = "newly processed masked sgc data"
+    def eboss_WEIGHT_SYSTOT_sub(self):
+        self.dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_data/'
+        self.data = self.dir+'eBOSS_ELG_full_ALL_v1_1.dat_sub.fits'
+        self.uniform = self.dir+'eBOSS_ELG_full_ALL_v1_1.ran_sub.fits'
 #mask
 class masks():
     def __init__(self):

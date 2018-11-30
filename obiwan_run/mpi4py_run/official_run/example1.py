@@ -31,7 +31,7 @@ class MyApp(object):
         # let's prepare our work queue. This can be built at initialization time
         # but it can also be added later as more work become available
         #
-        task_list = np.loadtxt(BRICKSTAT_DIR + 'UnFinishedBricks.txt', dtype=np.str)
+        task_list = np.loadtxt(BRICKSTAT_DIR + 'EasyBricks.txt', dtype=np.str)
         if tasks is None:
            tasks = len(task_list)
         for i in range(tasks):

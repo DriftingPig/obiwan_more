@@ -8,7 +8,7 @@ from math import *
 from astropy.table import Column
 example_file = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/tractor/000/0001m005/more_rs0/tractor-0001m005.fits'
 
-top_dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_new_ccd_list/tractor/'
+top_dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/elg_eight_bricks/tractor/'
 output_dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/subset/'
 brick_pathes = n.array(glob.glob(top_dir + "???/*"))
 
@@ -20,12 +20,12 @@ brick_list = n.array([ os.path.basename(br) for br in brick_pathes ])
 simdat_dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_elg/sgc_brick_dat/'
 
 #all bricks should be succrssful, but might not contain elgs after selection
-fn_PB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/more/obiwan_run/brickstat/elg_new_ccd_list/FinishedBricks.txt'
+fn_PB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/more/obiwan_run/brickstat/ProcessedBricks.txt'
 #fn_FB='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/more/obiwan_run/brickstat/elg_new_ccd_list/FinishedBricks.txt'
 brick_list_real = n.loadtxt(fn_PB,dtype=n.str).transpose()
 #brick_list_finished = n.loadtxt(fn_FB,dtype=n.str).transpose()
 #select ELGs in one brick
-def select_all(index, top_dir = top_dir, brick_pathes = brick_pathes, brick_list = brick_list, startid = 0, nobj = 1000, footprint = 'sgc'):
+def select_all(index, top_dir = top_dir, brick_pathes = brick_pathes, brick_list = brick_list, startid = 0, nobj = 200, footprint = 'sgc'):
     brick_name = brick_list[index]
     if not brick_name in brick_list_real:
         return None
@@ -33,10 +33,10 @@ def select_all(index, top_dir = top_dir, brick_pathes = brick_pathes, brick_list
     fn_simcat = simdat_dir + 'brick_' + brick_name + '.fits'
     assert(os.path.isfile(fn_simcat))
     #tractor catalogue -- need to be modifiled in the future, multiple rs
-    fn_tractorcat = brick_pathes[index]+'/more_rs0/tractor-'+brick_name+'.fits'
+    fn_tractorcat = brick_pathes[index]+'/rs0/tractor-'+brick_name+'.fits'
     assert(os.path.isfile(fn_tractorcat))
     #DR_5 data
-    top_dir_dr5 = "/global/project/projectdirs/cosmo/data/legacysurvey/dr5/tractor"
+    top_dir_dr5 = "/global/project/projectdirs/cosmo/data/legacysurvey/dr3/tractor"
     fn_DR5 = os.path.join( top_dir_dr5, brick_name[:3], "tractor-"+brick_name+".fits")
     assert(os.path.isfile(fn_DR5))
     #select ELG for obiwan-randoms
@@ -285,6 +285,8 @@ def brick_stacks():
     from multiprocessing import Pool
     ntasks = 25
     p = Pool(ntasks)
+    import pdb
+    pdb.set_trace()
     task_list = np.arange(0, len(brick_list))
     sub_task_list = np.array_split(task_list, ntasks)
     
@@ -312,11 +314,11 @@ def brick_stacks():
             new_col_dr5cat = np.hstack((new_col_dr5cat, new_col_dr5cat_i))
        
     hdu_tccat_all = fits.BinTableHDU.from_columns(new_col_tccat)
-    hdu_tccat_all.writeto(output_dir + 'random_subset.fits',overwrite = True)
+    hdu_tccat_all.writeto(output_dir + 'random_subset_old_dr3.fits',overwrite = True)
     hdu_simcat_all = fits.BinTableHDU.from_columns(new_col_simcat)
-    hdu_simcat_all.writeto(output_dir + 'sim_subset.fits',overwrite = True)
+    hdu_simcat_all.writeto(output_dir + 'sim_subset_old_dr3.fits',overwrite = True)
     hdu_dr5cat_all = fits.BinTableHDU.from_columns(new_col_dr5cat)
-    hdu_dr5cat_all.writeto(output_dir + 'dr5cat_subset.fits',overwrite = True)
+    hdu_dr5cat_all.writeto(output_dir + 'dr5cat_subset_old_dr3.fits',overwrite = True)
     tot=0
     for subs in X:
         if subs is not None:
