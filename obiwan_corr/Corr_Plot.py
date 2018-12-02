@@ -6,9 +6,10 @@ import numpy.polynomial.legendre as lgd
 from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib import pyplot as plt
 filename = 'BinHist'
-datatype = 'obiwan'
-filedir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eboss/BinHist/'+datatype+'/'
-plot_title = 'ELG random VS eboss ELG, SGC'
+datatype = 'uniform'
+output_fn = 'uniform_chunk22'
+filedir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eboss_chunk22/BinHist/'+datatype+'/'
+plot_title = 'ELG random VS eboss ELG, chunk22'
 def JKnife_CorrFunc(Njob, Jacknife=-1,k0=1, order=0,name = filename):
     #    pp = PdfPages('Correlation_Function_of_order_No'+str(order)+'.pdf')
     #    b2=np.loadtxt('xi0isoChallenge_matterpower6.0.dat').transpose()
@@ -117,7 +118,7 @@ def CorrFunc(Njob=Njob,k0=1, order=0,name_corr = filename):
     for i in range(0,Sep_interval):
         x[i]=pow(10,i*AngleInteval+MinAngle)*180./pi
     
-    np.savetxt('/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eight_bricks/output/'+datatype+'.out',zip(x,Final_total,CorrFunc_Err))
+    np.savetxt('/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/corr_output/'+output_fn+'.out',zip(x,Final_total,CorrFunc_Err))
     #plt.errorbar(x, Final_total, yerr=CorrFunc_Err)
     plt.gca().set_xscale("log", nonposx='clip')
     plt.errorbar(x, x*Final_total,x*CorrFunc_Err,marker = 'o')

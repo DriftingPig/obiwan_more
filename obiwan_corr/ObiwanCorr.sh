@@ -1,9 +1,9 @@
 #!/bin/bash -l
-TOPDIR='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eboss/splitdata/obiwan/'
-DR5ELGs=${TOPDIR}'eBOSS_ELG_full_ALL_v1_1.dat_sub_subset'
-ObiwanELGs=${TOPDIR}'eBOSS_ELG_full_ALL_v1_1.ran_sub_subset'
+TOPDIR='/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eboss_chunk22/splitdata/uniform/'
+DR5ELGs=${TOPDIR}'eBOSS_ELG_full_ALL_v1_1.dat_chunk22_subset'
+ObiwanELGs=${TOPDIR}'eBOSS_ELG_full_ALL_v1_1.ran_chunk22_subset'
 dat=".dat"
-OutputELGs="/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eboss/BinHist/obiwan/BinHist"
+OutputELGs="/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eboss_chunk22/BinHist/uniform/BinHist"
 D="D"
 R="R"
 File_Num=20

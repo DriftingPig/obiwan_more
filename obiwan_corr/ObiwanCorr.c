@@ -145,7 +145,7 @@ int main(int argc, char* argv[]){
     fprintf(FileOut,"%d %LF\n",i,HistBins[i]);
     }
     fclose(FileOut);
-    FileOut = fopen("/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eboss/BinHist/obiwan/TotalPoints.txt",mode);
+    FileOut = fopen("/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/elg_eboss_chunk22/BinHist/uniform/TotalPoints.txt",mode);
     if(pairtype==0){
     fprintf(FileOut,"%LF 0 0 %d %d\n",totalpts,index1,index2);}
     if(pairtype==1){

@@ -6,7 +6,7 @@ import healpy as hp
 from astropy.table import Table
 from astropy.io import fits
 from math import *
-dirname = "elg_eboss/splitdata/obiwan"
+dirname = "elg_eboss_chunk22/splitdata/uniform"
 from subprocess import call
 call(["mkdir", "-p","/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/"+dirname+"/"])
 output_filename = "/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/obiwan_corr/"+dirname+"/"
@@ -44,7 +44,7 @@ def ranHelpsort(filename,res=256,rad=''):
     return tb_dat
 
 #generate txt files which inculde sin, cos of ra,dec
-def SprtFile_nest(filename, total_subs,res=256,rad=''):
+def SprtFile_nest(filename, total_subs,res=256,rad='', use_weight = False):
     dat = ranHelpsort(filename,res,rad)
     import os
     base_filename = os.path.basename(filename)
@@ -66,7 +66,10 @@ def SprtFile_nest(filename, total_subs,res=256,rad=''):
         weight = dat['WEIGHT_SYSTOT'][i]
         assert(weight>=0)
         assert(weight<=1)
-        files[j].write(str(sin(thi))+' '+str(cos(thi))+' '+str(sin(phi))+' '+str(cos(phi))+' '+str(weight)+'\n')
+        if use_weight == True:
+            files[j].write(str(sin(thi))+' '+str(cos(thi))+' '+str(sin(phi))+' '+str(cos(phi))+' '+str(weight)+'\n')
+        else:
+            files[j].write(str(sin(thi))+' '+str(cos(thi))+' '+str(sin(phi))+' '+str(cos(phi))+' 1\n')
         if j != total_subs-1:
             count+=1
             if count == sub_num:
@@ -111,9 +114,9 @@ def SprtFile_nest_dat(filename, total_subs, pixflag, res=256,rad=''):
 Top_dir = '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/eboss_data/'
 Top_dir_ran = Top_dir
 #Top_dir_ran= '/global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_out/subset/'
-datfilename = 'eBOSS_ELG_full_ALL_v1_1.dat_sub.fits'
+datfilename = 'eBOSS_ELG_full_ALL_v1_1.dat_chunk22.fits'
 #datfilename = 'dr5_subset_masked.fits'
-ranfilename = 'eBOSS_ELG_full_ALL_v1_1.ran_sub.fits'
+ranfilename = 'eBOSS_ELG_full_ALL_v1_1.ran_chunk22.fits'
 #ranfilename = 'sim_subset_masked.fits'
-pix_flag = SprtFile_nest(Top_dir_ran+ranfilename,20)
+pix_flag = SprtFile_nest(Top_dir_ran+ranfilename,20,use_weight = False)
 SprtFile_nest_dat(Top_dir+datfilename,20,pix_flag)
